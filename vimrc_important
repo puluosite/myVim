@@ -1,0 +1,52 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'derekwyatt/vim-fswitch'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+filetype plugin on
+syntax enable
+syntax on
+
+
+set background=light
+"colorscheme solarized
+colorscheme molokai
+
+set hlsearch
+
+filetype indent on
+set expandtab
+set tabstop=2
+
+set ignorecase
+set smartcase
+
+set number
+set cursorline
+"set cursorcolumn
+"set ruler
+ 
+	
+
+nmap <Leader>sch :FSSplitRight<CR>
+nmap <Leader>vch :FSSplitLeft<CR>
+
+vnoremap <Leader>y "+y
+nmap <Leader>p "+p
+
+" ctags places
+set tags+=tags,~/workspace/Nuro/onboard/tags;
+
+" tabs
+
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
