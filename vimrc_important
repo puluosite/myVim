@@ -9,6 +9,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'scrooloose/nerdcommenter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -43,6 +44,7 @@ nmap <Leader>vch :FSSplitLeft<CR>
 vnoremap <Leader>y "+y
 nmap <Leader>p "+p
 
+" comment/uncomment <Leader> cc/cu
 " ctags places
 set tags+=tags,~/workspace/tags;
 
