@@ -44,7 +44,7 @@ vnoremap <Leader>y "+y
 nmap <Leader>p "+p
 
 " ctags places
-set tags+=tags,~/workspace/Nuro/onboard/tags;
+set tags+=tags,~/workspace/tags;
 
 " tabs
 
