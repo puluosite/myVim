@@ -45,6 +45,25 @@
 " 定义快捷键的前缀，即 <Leader>
 "let mapleader=";"
 
+"   SO IMPORTANT!!!!!!!!
+"https://github.com/yangyangwithgnu/use_vim_as_ide
+"https://github.com/yangyangwithgnu/use_vim_as_ide
+"https://github.com/yangyangwithgnu/use_vim_as_ide
+
+"Use vundle!
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'derekwyatt/vim-fswitch'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 set nocompatible        " use vim as vim, should be put at the very start
 set history=100         " lines of Ex-mode commands, search history
@@ -187,9 +206,9 @@ let g:indent_guides_guide_size=1
 "switch between cpp and h files
 " *.cpp 和 *.h 间切换
 nmap <Leader>ch :A<CR>
-" 子窗口中显示 *.cpp 或 *.h
-nmap <Leader>sch :AS<CR>
-nmap <Leader>vch :AV<CR>
+" 子窗口中显示 *.cpp 或 *.h, use fswitch
+nmap <Leader>sch :FSSplitRight<<CR> 
+nmap <Leader>vch :FSSplitLeft<CR>
 " clang
 nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
 " 只能是 #include 或已打开的文件
